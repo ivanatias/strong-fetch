@@ -16,7 +16,7 @@
 ```typescript
 import fetch from "strong-fetch"
 import type { ProductResponse } from "./types"
-import type { StrongFetchResponse } from "./strong-fetch"
+import type { StrongFetchResponse } from "strong-fetch"
 
 const searchProducts = (
   query: string
