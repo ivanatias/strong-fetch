@@ -14,7 +14,7 @@ const fetch = async <T = any>(
       }),
       ...restOfConfig,
     })
-    .catch((err) => {
+    .catch((err: Error) => {
       if (err.name === "AbortError") {
         return new Response("Client Closed Request", {
           status: 499,
