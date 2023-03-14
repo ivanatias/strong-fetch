@@ -1,4 +1,4 @@
-# Strong-fetch demo
+# [Strong-fetch demo](https://strong-fetch-ia.vercel.app/)
 
 `strong-fetch` is an `axios` like wrapper around the `fetch` API with built-in (and optional) `AbortController` handling. You only need to provide an unique `signalKey` for each request. Say no more to creating new `AbortController` instances everywhere, `strong-fetch` will do everything for you.
 
@@ -55,4 +55,21 @@ const searchProducts = (query: string) => {
     }
   )
 }
+```
+
+## Playground:
+
+You can play around with the code on this [Codesandbox](https://codesandbox.io/p/sandbox/elastic-frog-9m2p7g).
+
+## Run locally:
+
+```
+// Clone the repository
+git clone https://github.com/ivanatias/strong-fetch.git
+
+// Install the dependencies
+npm install
+
+// Start a development server
+npm run dev
 ```
