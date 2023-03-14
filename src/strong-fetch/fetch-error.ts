@@ -1,7 +1,7 @@
 class FetchError extends Error {
   status: number
 
-  constructor(message: string = "Fetch Error", status: number = 500) {
+  constructor(message = "Fetch Error", status = 500) {
     super(message)
 
     Object.setPrototypeOf(this, new.target.prototype)
