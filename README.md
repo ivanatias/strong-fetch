@@ -5,11 +5,27 @@
 ## `strong-fetch` provides:
 
 - Automatic (and optional) `AbortController` handling.
-- A `FetchError` object that extends the `Error` object and includes the status of the error response for better error handling.
-- A generic `StrongFetchResponse` type for nicely typing responses.
+- A `FetchError` object that extends the `Error` object and includes the status of the error response for better exceptions handling.
+- Responses have the shape of `StrongFetchResponse`.
 - Utilities for manually aborting requests if needed.
 
 `strong-fetch` is TypeScript friendly.
+
+## Response schema:
+
+The response for a request contains the following information:
+
+```typescript
+data: {
+} // Object containing the response provided by the server.
+
+status: number // HTTP status from the server response.
+
+statusText: string // HTTP status message from the server response.
+
+headers: {
+} // HTTP headers the server responded with.
+```
 
 ## Usage examples:
 
