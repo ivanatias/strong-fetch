@@ -41,6 +41,16 @@ const searchProducts = (
     signalKey: "searchProducts",
   })
 }
+
+const results = await searchProducts("something")
+/* 
+    {
+      data: ProductResponse
+      status: number
+      statusText: string
+      headers: Record<string, string>
+    }
+*/
 ```
 
 ```typescript
@@ -54,6 +64,16 @@ const searchProducts = (query: string) => {
       signalKey: "searchProducts",
     }
   )
+
+  const results = await searchProducts("something")
+  /* 
+    {
+      data: ProductResponse
+      status: number
+      statusText: string
+      headers: Record<string, string>
+    }
+  */
 }
 ```
 
