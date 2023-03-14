@@ -48,7 +48,8 @@ input::placeholder {
 
 pre {
   color: #f1f5f9;
-  max-width: 48rem;
+  width: 28rem;
+  overflow-x: auto;
 }
 
 h1,
