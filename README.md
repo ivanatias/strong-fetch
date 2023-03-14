@@ -44,12 +44,12 @@ const searchProducts = (
 
 const results = await searchProducts("something")
 /* 
-    {
-      data: ProductResponse
-      status: number
-      statusText: string
-      headers: Record<string, string>
-    }
+  {
+    data: ProductResponse
+    status: number
+    statusText: string
+    headers: Record<string, string>
+  }
 */
 ```
 
