@@ -148,6 +148,7 @@ const App = () => {
       })
       .catch((err) => {
         if (err instanceof FetchError) {
+          console.log(err.name)
           console.error("strong-fetch says:", {
             error: err.name,
             message: err.message,

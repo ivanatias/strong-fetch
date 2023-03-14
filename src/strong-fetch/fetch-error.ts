@@ -6,14 +6,13 @@ class FetchError extends Error {
 
     Object.setPrototypeOf(this, new.target.prototype)
 
-    this.name = this.constructor.name
+    this.name = FetchError.name
     this.status = status
 
-    // This works but how do I fix the typings????
-    Error.captureStackTrace(this, this.constructor)
+    Error.captureStackTrace(this, FetchError)
 
     if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, this.constructor)
+      Error.captureStackTrace(this, FetchError)
     }
   }
 }
