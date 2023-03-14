@@ -59,7 +59,7 @@ const searchProducts = (query: string) => {
 
 ## Playground:
 
-You can play around with the code on this [Codesandbox](https://codesandbox.io/p/sandbox/elastic-frog-9m2p7g)!
+You can play around with the code on this [Codesandbox](https://codesandbox.io/p/sandbox/elastic-frog-9m2p7g).
 
 ## Run locally:
 
