@@ -11,7 +11,7 @@
 
 `strong-fetch` is TypeScript friendly.
 
-## Usage example:
+## Usage examples:
 
 ```typescript
 import fetch from "strong-fetch"
@@ -24,5 +24,19 @@ const searchProducts = (
   return fetch(`https://dummyjson.com/products/search?q=${query}`, {
     signalKey: "searchProducts",
   })
+}
+```
+
+```typescript
+import fetch from "strong-fetch"
+import type { ProductResponse } from "./types"
+
+const searchProducts = (query: string) => {
+  return fetch<ProductResponse>(
+    `https://dummyjson.com/products/search?q=${query}`,
+    {
+      signalKey: "searchProducts",
+    }
+  )
 }
 ```
