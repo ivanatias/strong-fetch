@@ -59,4 +59,6 @@ function abortRequest(key: string, reason = "CANCELLED REQUEST") {
   ABORT_REQUEST_CONTROLLERS.get(key)?.abort(reason)
 }
 
-export { fetch, abortAndGetNewSignal, abortRequest }
+export { abortAndGetNewSignal, abortRequest }
+
+export default fetch
