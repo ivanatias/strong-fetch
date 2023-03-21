@@ -65,9 +65,10 @@ const searchProducts = (query: string) => {
       signalKey: "searchProducts",
     }
   )
+}
 
-  const results = await searchProducts("something")
-  /* 
+const results = await searchProducts("something")
+/* 
     {
       data: ProductResponse
       status: number
@@ -75,7 +76,6 @@ const searchProducts = (query: string) => {
       headers: Record<string, string>
     }
   */
-}
 ```
 
 ## Playground:
