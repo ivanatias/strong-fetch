@@ -4,6 +4,7 @@
 
 ## `strong-fetch` provides:
 
+- Automatic JSON response data handling.
 - Automatic (and optional) `AbortController` handling.
 - A `FetchError` object that extends the `Error` object and includes the status of the error response for better exceptions handling.
 - Responses have the shape of `StrongFetchResponse`.
