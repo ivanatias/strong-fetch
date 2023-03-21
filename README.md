@@ -75,7 +75,7 @@ const results = await searchProducts("something")
       statusText: string
       headers: Record<string, string>
     }
-  */
+*/
 ```
 
 ## Playground:
