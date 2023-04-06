@@ -1,11 +1,12 @@
 # [Strong-fetch demo](https://strong-fetch-ia.vercel.app/)
 
-`strong-fetch` is an `axios` like wrapper around the `fetch` API with built-in (and optional) `AbortController` handling. You only need to provide an unique `signalKey` for each request. Say no more to creating new `AbortController` instances everywhere, `strong-fetch` will do everything for you.
+`strong-fetch` is a wrapper around the `fetch` API. It provides `axios`' basic features and has built-in (and optional) `AbortController` handling. You only need to provide an unique `signalKey` for each request. Say no more to creating new `AbortController` instances everywhere, `strong-fetch` will do everything for you.
 
-## `strong-fetch` provides:
+## `strong-fetch` features:
 
-- Automatic JSON response data handling.
 - Automatic (and optional) `AbortController` handling.
+- Automatic JSON response data handling.
+- Automatically throws on non 2xx responses.
 - A `FetchError` object that extends the `Error` object and includes the status of the error response for better exceptions handling.
 - Responses have the shape of `StrongFetchResponse`.
 - Utilities for manually aborting requests if needed.
