@@ -1,8 +1,9 @@
 {
   "name": "strong-fetch-demo",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": "Ivan Atias",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
