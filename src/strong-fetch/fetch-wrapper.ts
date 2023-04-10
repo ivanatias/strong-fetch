@@ -4,11 +4,13 @@ import type { StrongFetchConfig, StrongFetchResponse } from "./types"
 const ABORT_REQUEST_CONTROLLERS = new Map<string, AbortController>()
 
 const fetch = async <T = any>(
-  url: URL | RequestInfo,
-  { signalKey, ...restOfConfig }: StrongFetchConfig = {}
+  input: URL | RequestInfo,
+  config: StrongFetchConfig | undefined = {}
 ): Promise<StrongFetchResponse<T>> => {
+  const { signalKey, ...restOfConfig } = config
+
   const res = await globalThis
-    .fetch(url, {
+    .fetch(input, {
       ...(signalKey !== undefined && {
         signal: abortAndGetNewSignal(signalKey),
       }),
