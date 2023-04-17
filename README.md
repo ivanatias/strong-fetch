@@ -1,6 +1,6 @@
 # [Strong-fetch demo](https://strong-fetch-ia.vercel.app/)
 
-`strong-fetch` is a wrapper around the `fetch` API. It provides `axios`' basic features and has built-in (and optional) `AbortController` handling. You only need to provide an unique `signalKey` for each request. Say no more to creating new `AbortController` instances everywhere, `strong-fetch` will do everything for you.
+`strong-fetch` is a wrapper around the `fetch` API. It provides `axios`' basic features and has built-in (and optional) automatic `AbortController` handling. You only need to provide an unique `signalKey` for each request. Say no more to creating new `AbortController` instances everywhere, `strong-fetch` will do everything for you.
 
 ## `strong-fetch` features:
 
@@ -32,19 +32,19 @@ headers: {
 ## Usage examples:
 
 ```typescript
-import fetch from "strong-fetch"
-import type { ProductResponse } from "./types"
-import type { StrongFetchResponse } from "strong-fetch"
+import fetch from 'strong-fetch'
+import type { ProductResponse } from './types'
+import type { StrongFetchResponse } from 'strong-fetch'
 
 const searchProducts = (
   query: string
 ): Promise<StrongFetchResponse<ProductResponse>> => {
   return fetch(`https://dummyjson.com/products/search?q=${query}`, {
-    signalKey: "searchProducts",
+    signalKey: 'searchProducts'
   })
 }
 
-const results = await searchProducts("something")
+const results = await searchProducts('something')
 /* 
   {
     data: ProductResponse
@@ -56,19 +56,19 @@ const results = await searchProducts("something")
 ```
 
 ```typescript
-import fetch from "strong-fetch"
-import type { ProductResponse } from "./types"
+import fetch from 'strong-fetch'
+import type { ProductResponse } from './types'
 
 const searchProducts = (query: string) => {
   return fetch<ProductResponse>(
     `https://dummyjson.com/products/search?q=${query}`,
     {
-      signalKey: "searchProducts",
+      signalKey: 'searchProducts'
     }
   )
 }
 
-const results = await searchProducts("something")
+const results = await searchProducts('something')
 /* 
     {
       data: ProductResponse
