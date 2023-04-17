@@ -1,5 +1,5 @@
-import { FetchError } from "./fetch-error"
-import type { StrongFetchConfig, StrongFetchResponse } from "./types"
+import { FetchError } from './fetch-error'
+import type { StrongFetchConfig, StrongFetchResponse } from './types'
 
 const ABORT_REQUEST_CONTROLLERS = new Map<string, AbortController>()
 
@@ -12,21 +12,21 @@ const fetch = async <T = any>(
   const res = await globalThis
     .fetch(input, {
       ...(signalKey !== undefined && {
-        signal: abortAndGetNewSignal(signalKey),
+        signal: abortAndGetNewSignal(signalKey)
       }),
-      ...restOfConfig,
+      ...restOfConfig
     })
     .catch((err: Error) => {
-      if (err.name === "AbortError") {
-        return new Response("Client Closed Request", {
+      if (err.name === 'AbortError') {
+        return new Response('Client Closed Request', {
           status: 499,
-          statusText: "Client Closed Request",
+          statusText: 'Client Closed Request'
         })
       }
 
-      return new Response("Network Connect Timeout Error", {
+      return new Response('Network Connect Timeout Error', {
         status: 599,
-        statusText: "Network Connect Timeout Error",
+        statusText: 'Network Connect Timeout Error'
       })
     })
 
@@ -45,8 +45,8 @@ const fetch = async <T = any>(
   return {
     data,
     status: res.status,
-    statusText: res.statusText || "OK",
-    headers,
+    statusText: res.statusText || 'OK',
+    headers
   }
 }
 
@@ -57,7 +57,7 @@ function abortAndGetNewSignal(key: string) {
   return newController.signal
 }
 
-function abortRequest(key: string, reason = "CANCELLED REQUEST") {
+function abortRequest(key: string, reason = 'CANCELLED REQUEST') {
   ABORT_REQUEST_CONTROLLERS.get(key)?.abort(reason)
 }
 

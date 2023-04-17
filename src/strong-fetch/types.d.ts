@@ -1,4 +1,4 @@
-interface StrongFetchConfig extends Omit<RequestInit, "signal"> {
+interface StrongFetchConfig extends Omit<RequestInit, 'signal'> {
   signalKey?: string
 }
 
