@@ -32,9 +32,8 @@ headers: {
 ## Usage examples:
 
 ```typescript
-import fetch from 'strong-fetch'
+import fetch, { type StrongFetchResponse } from 'strong-fetch'
 import type { ProductResponse } from './types'
-import type { StrongFetchResponse } from 'strong-fetch'
 
 const searchProducts = (
   query: string
@@ -78,10 +77,6 @@ const results = await searchProducts('something')
     }
 */
 ```
-
-## Playground:
-
-You can play around with the code on this [Codesandbox](https://codesandbox.io/p/sandbox/elastic-frog-9m2p7g)!
 
 ## Run locally:
 
