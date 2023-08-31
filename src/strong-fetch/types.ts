@@ -9,4 +9,4 @@ interface StrongFetchResponse<T = any> {
   headers: Record<string, string>
 }
 
-export { StrongFetchConfig, StrongFetchResponse }
+export type { StrongFetchConfig, StrongFetchResponse }

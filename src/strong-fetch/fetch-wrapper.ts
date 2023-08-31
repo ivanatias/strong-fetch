@@ -1,5 +1,8 @@
-import { FetchError } from './fetch-error'
-import type { StrongFetchConfig, StrongFetchResponse } from './types'
+import {
+  type StrongFetchConfig,
+  type StrongFetchResponse,
+  FetchError
+} from './'
 
 const ABORT_REQUEST_CONTROLLERS = new Map<string, AbortController>()
 
@@ -61,6 +64,6 @@ function abortRequest(key: string, reason = 'CANCELLED REQUEST') {
   ABORT_REQUEST_CONTROLLERS.get(key)?.abort(reason)
 }
 
-export { abortAndGetNewSignal, abortRequest }
-
 export default fetch
+
+export { abortAndGetNewSignal, abortRequest }
